@@ -9,6 +9,7 @@ The data table is named `pet_supplies`.
 
 The dataset contains the sales records in the stores last year. 
 
+##### The pet supplies
 
 | Column Name | Criteria                                                |
 |-------------|---------------------------------------------------------|
@@ -41,7 +42,6 @@ __TASK 1:__
 </br>Query to return a table that matches the date description provided.
 Taking a quick look at the data , we're all sure that it is not the best data to report on too. 
 
-##### The pet supplies
 
 1. Nulls
 2. Not standardized categorical data. Some are all capital letters
@@ -58,30 +58,6 @@ __TASK 2:__
 
 
 
-
-[Jump to a section with custom ID](#some-id)
-
-...
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<a name="some-id" />
-
-
-
-##### Section with some ID
 
 
 
