@@ -112,6 +112,7 @@ __Observation__
 - Bird are the highest sales in both non-repeated purchase and repeated purchase, next to dog and cat.
 - Bird in repeated purchase with the value '1408' appeared to be the highest sale compare to bird not repeated purchase with the value '1380'
 - It appears to be depending on the different kind of animal impacted the repeated purchase and the avg sales.
+- The results tells us that the products for the birds are the highest sales which tells us that the management should always stock their bird products as they can because many people buy bird supplies.
   
 
 __Step 3:__ 
@@ -140,5 +141,16 @@ __Observation__
 - By getting the highest sales by rank, the management should always check the stock of these products so the sales will still go up.
 
 ### Conclusion
+
+- Given that the company wants to know if the repeated purchases impact sales, the results shows that
+
+
+<img width="671" height="108" alt="image" src="https://github.com/user-attachments/assets/bd21d877-a9f0-4e49-8cc1-58f034d0693f" />
+
+<img width="814" height="87" alt="image" src="https://github.com/user-attachments/assets/c3985363-865d-451d-9773-4c47600587ad" />
+
+
+
+
 
 
