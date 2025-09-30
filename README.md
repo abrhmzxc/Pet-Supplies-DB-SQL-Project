@@ -43,9 +43,15 @@ The company PetMind want a report on how repeat purchases impact sales.
 ----------- 
 
 ## Process
-> Note: In a real workplace, you want to avoid mistakes specially with data that in just one wrong code/query the raw data will be destroyed. So if you are in real workplace, creating a new table, duplicating the real raw data to a new data table and working on that 
+> Note: </br>
+In a real workplace, you want to avoid mistakes specially with data that in just one wrong code/query the raw data will be destroyed. So if you are in real workplace, creating a new table, duplicating the real raw data to a new data table and working on that 
 duplicated table will let you do all kind of things, experiment, and assess every possible query that may lead you to the best results that you need without the pressure of destroying or deleting the whole raw data as you work.
 
+
+__Step 1:__ 
+</br>
+
+__Cleaning the data__</br>
 Taking a quick look at the data, we're all sure that it is not the best data to report on too. Important to note in assessing the data are:
 
 1. Nulls
@@ -59,9 +65,8 @@ With that in mind, cleaning the data is the first priority.
 - Convert values between data types
 - Clean categorical and text data by manipulating strings
 
-__Step 1:__ 
-</br>
-Checking for duplicated data: 
+
+To check for duplicated data: 
 
 <img width="813" height="307" alt="image" src="https://github.com/user-attachments/assets/62fe4a47-9acf-4380-9080-7e40b3b96515" />
 
@@ -69,13 +74,71 @@ Checking for duplicated data:
 >> The 'PARTITION BY' clause divides the result set into partitions and assigns a unique number to each row within each partition.
 >>> to be sure that no duplicate data are in the data set, querying it is the best way.
 
-Querying what is asked in the [table](#the-pet-supplies)
+Querying to return a table that matches the [table](#the-pet-supplies) description:
+
+<img width="877" height="784" alt="image" src="https://github.com/user-attachments/assets/5bd191f5-4509-4bbb-ab34-a011b8285c87" />
+
+![cleaned_per_supplies](https://github.com/user-attachments/assets/d2653bc8-0b55-4fcd-88bf-cf28332ff893)
 
 
-<img width="751" height="597" alt="image" src="https://github.com/user-attachments/assets/a2cca375-37e9-4e07-a965-6a56f74a7496" />
+- Any missing values in columns category, animal and size are replaced with 'Unknown'
+  > To ensure there are no unexpected values, the 'Unknown' in else should suffice and it also catches the nulls
+- Standardizing values
+  > Using LOWER function to ensure case-Insensitive comparison and then INITCAP for standardizing
+- Any missing values in columns price and rating replaced with '0'
+- any missing values in column sales are replaced with the overall median sales.
+  > by using common table expression (CTE) to query the median of the sales so it can be used to replace missing values in column sales
 
+__Step 2:__ 
+</br>
+To show whether the sales are higher for repeat purchases for different animals. Return the table 'animal', 'repeat_purchase' for indicator, 'avg_sales' and with 'min_sales' and 'max_sales'.
 
+<img width="418" height="244" alt="image" src="https://github.com/user-attachments/assets/740a4333-8aa6-4439-b165-3417289ba912" />
 
+> I did not put the query for the cleaned data in the FROM yet, to visualize and not to be confused with the code.
+>> I replaced the repeat_purchases (1= Yes, and 0 =No to visually tell and determine if it is a repeated purchases, instead of binary number (0,1)
+>>> average the sales to recognize the difference of non-repeated purchase to repeated.
+>>> GROUP BY the animal and repeat_purchace and ORDER BY average sale to tell whether the repeated purchases have a higher sales than the other
 
+#### With the clean data
+
+<img width="630" height="771" alt="image" src="https://github.com/user-attachments/assets/4e0d6659-4d6a-4c4c-a813-5692fd38b54f" />
+
+<img width="956" height="286" alt="image" src="https://github.com/user-attachments/assets/4544b139-4848-4ad9-bbc9-617d1d708545" />
+
+__Observation__
+</br>
+
+- Bird are the highest sales in both non-repeated purchase and repeated purchase, next to dog and cat.
+- Bird in repeated purchase with the value '1408' appeared to be the highest sale compare to bird not repeated purchase with the value '1380'
+- It appears to be depending on the different kind of animal impacted the repeated purchase and the avg sales.
+  
+
+__Step 3:__ 
+
+The management team want to focus on efforts in the next year on the most popular pets - cats and dogs - for products that are bought repeatedly.
+return the product_id, sales and rating for the relevant products.
+
+- the columns should be product_id, sales, and rating
+- for the relevant products that is dogs and cats where they are bought repeatedly
+
+<img width="387" height="143" alt="image" src="https://github.com/user-attachments/assets/c176ee03-a048-4965-84e3-134f84555591" />
+
+#### With the clean data
+
+<img width="737" height="759" alt="image" src="https://github.com/user-attachments/assets/888097d9-c054-4176-b591-2623035d684c" />
+
+<img width="956" height="505" alt="image" src="https://github.com/user-attachments/assets/8609a807-c404-4259-b1c7-023c6007ee21" /> 
+
+> I did put animal also, so I can tell whether the product is for cat or dog
+> The result is filtered for cats and dogs only with the repeated purchases.
+
+__Observation__
+
+- Product 518, for dogs, have the highest sales compared to cats. With a value of 1797.02 sales
+- Product 280 has the second highest sales but has lower rating than the 1st highest sale product which will need more checking and investigation on the actual product to test and see whether why the ratings is low but at the same time has the high sale purchaces.
+- By getting the highest sales by rank, the management should always check the stock of these products so the sales will still go up.
+
+### Conclusion
 
 
