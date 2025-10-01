@@ -140,17 +140,33 @@ __Observation__
 - Product 280 has the second highest sales but has lower rating than the 1st highest sale product which will need more checking and investigation on the actual product to test and see whether why the ratings is low but at the same time has the high sale purchaces.
 - By getting the highest sales by rank, the management should always check the stock of these products so the sales will still go up.
 
-### Conclusion
+## Conclusion
 
-- Given that the company wants to know if the repeated purchases impact sales, the results shows that
-
-
-<img width="671" height="108" alt="image" src="https://github.com/user-attachments/assets/bd21d877-a9f0-4e49-8cc1-58f034d0693f" />
-
-<img width="814" height="87" alt="image" src="https://github.com/user-attachments/assets/c3985363-865d-451d-9773-4c47600587ad" />
+- Given that the company wants to know if the repeated purchases impact sales, the answer is yes and no. the results shows that
 
 
+<img width="1107" height="112" alt="image" src="https://github.com/user-attachments/assets/25af85ed-52f8-4fe6-b144-6eb31acae3bd" />
+
+- High Average Sales but low total sales </br>
+  Meaning each transaction or order of product brings in a __large amount of sales__, but the product is s old __infrequently__ or in __low volume__.
+- The birds product is __High-value but niche__. This could indicate a luxury item, or a special product or can be rare purchase.
+- It is a __premium/low frequency products__, the management established a pricing power but for targeted consumer only promotion.
+
+<img width="1108" height="85" alt="image" src="https://github.com/user-attachments/assets/9a301840-58f2-41a9-aff8-614de25c17c9" />
 
 
+<img width="1108" height="86" alt="image" src="https://github.com/user-attachments/assets/c8b506e3-73f8-432e-83e5-30da640fea22" />
 
+- Low Average Sales, Hight Total Sales </>
+  Meaning each transaction generates __smaller sales amount__, but the product is sold frequently or in __large volume__
+- Both for Cats and Dogs is __popular, everyday, or mass-market item__. Revenue coms not from big order size, but from __scale and consistency.
+- It is a __Mass-market/high frequenct products__, the management strategy is efficieny & distribution.
+
+<img width="1110" height="86" alt="image" src="https://github.com/user-attachments/assets/65734f39-d18d-404e-87f1-ed34e092f164" />
+
+- Meaning the repeated purchases will impact the sales mainly depends of the kind of product to sell, luxury or not, for everyday  or for monthly/yearly.
+
+### So for the real business question is, "Does the company want to focus on margin per sale or overall revenue through scale?"
+
+----
 
