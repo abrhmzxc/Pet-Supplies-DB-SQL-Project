@@ -52,12 +52,12 @@ __Step 1:__
 </br>
 
 __Cleaning the data__</br>
-Taking a quick look at the data, we're all sure that it is not the best data to report on too. Important to note in assessing the data are:
+Taking a quick look at the data using __basic query__ to analyze every column, to look for inconsistency, we're all sure that it is not the best data to report on too. Important to note in assessing the data are:
 
 1. Nulls
 2. Not standardized categorical data. Some are all capital letters
 3. ' ','-', 'unlisted' unwanted values.
-4. Duplicated data
+4. Checking for Duplicated data
 
 With that in mind, cleaning the data is the first priority.
 
@@ -76,9 +76,11 @@ To check for duplicated data:
 
 Querying to return a table that matches the [table](#the-pet-supplies) description:
 
-<img width="877" height="784" alt="image" src="https://github.com/user-attachments/assets/5bd191f5-4509-4bbb-ab34-a011b8285c87" />
+<img width="984" height="741" alt="image" src="https://github.com/user-attachments/assets/c463f8d4-5156-4726-9cbf-15e6b7c18e56" />
+
 
 ![cleaned_per_supplies](https://github.com/user-attachments/assets/d2653bc8-0b55-4fcd-88bf-cf28332ff893)
+
 
 
 - Any missing values in columns category, animal and size are replaced with 'Unknown'
@@ -102,7 +104,9 @@ To show whether the sales are higher for repeat purchases for different animals.
 
 #### With the clean data
 
-<img width="630" height="771" alt="image" src="https://github.com/user-attachments/assets/4e0d6659-4d6a-4c4c-a813-5692fd38b54f" />
+<img width="726" height="847" alt="image" src="https://github.com/user-attachments/assets/44aeb815-860e-44c9-b920-7f3639a18c6a" />
+
+
 
 <img width="956" height="286" alt="image" src="https://github.com/user-attachments/assets/4544b139-4848-4ad9-bbc9-617d1d708545" />
 
@@ -127,7 +131,8 @@ return the product_id, sales and rating for the relevant products.
 
 #### With the clean data
 
-<img width="737" height="759" alt="image" src="https://github.com/user-attachments/assets/888097d9-c054-4176-b591-2623035d684c" />
+<img width="826" height="804" alt="image" src="https://github.com/user-attachments/assets/07ca6ffc-fb0c-4385-a5bf-4b04a7983334" />
+
 
 <img width="956" height="505" alt="image" src="https://github.com/user-attachments/assets/8609a807-c404-4259-b1c7-023c6007ee21" /> 
 
@@ -142,6 +147,7 @@ __Observation__
 
 ## Conclusion
 
+> Using the function GROUP BY ROLLUP to easily show the sub total and total per aggregated values, to easily compare the repeated and non-repeated purchase and also their average anf total sales.
 - Given that the company wants to know if the repeated purchases impact sales, the answer is yes and no. the results shows that
 
 
