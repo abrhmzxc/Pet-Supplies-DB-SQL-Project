@@ -1,5 +1,5 @@
 # Pet Supplies By PetMind
-Data Analyst Associate Practical Sample Exam using PostgreSQL
+Data Analyst Associate Practical Sample Exam using PostgreSQL By __DATA CAMP__
 - Data Cleaning
 - Exploratory Data Analysis
 ## Introduction
